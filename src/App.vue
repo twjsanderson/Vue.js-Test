@@ -1,8 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/" class="title">Pigeonline Test</router-link>
     </div>
     <router-view />
   </div>
@@ -27,5 +26,10 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.title {
+  color: #000000;
+  font-size: 25px;
 }
 </style>

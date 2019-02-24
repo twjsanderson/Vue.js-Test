@@ -1,4 +1,8 @@
-# my-vue-app
+# Pigeonline Test App
+
+This application prompts a user to verify the content of 2 columns and label accordingly them using dropdown menus. The user must choose which columns holds Province data and Email data.
+
+Once the data is correctly labelled, the user will be able to visualize the Email data in a bar-chart and filter through 4 categories of data by Province.
 
 ## Project setup
 ```
@@ -10,25 +14,6 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Screen Shots
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+!["View of chart after correctly labelling data"]()
