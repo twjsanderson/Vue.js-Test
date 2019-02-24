@@ -16,4 +16,4 @@ npm run serve
 
 ### Screen Shots
 
-!["View of chart after correctly labelling data"]()
+!["View of chart after correctly labelling data"](https://github.com/twjsanderson/Vue.js-Test/blob/master/public/Screenshot%20from%202019-02-24%2015-20-51.png)
