@@ -26,18 +26,18 @@ export default {
     this.regexY = /(\W|^)[\w.+\-]*@yahoo(\W|$)/gi;
     this.regexA = /(\W|^)[\w.+\-]*@AOL(\W|$)/gi;
   },
-  computed: {
+    computed: {
     domainCountON: function() {
       this.individual.forEach(person => {
         if (person.province == "ON") {
           for (let email in person) {
-            if (this.regexG.test(person.email)) {
+            if (this.regexG.test(person[email])) {
               this.counterOn[0] += 1;
             }
-            if (this.regexY.test(person.email)) {
+            if (this.regexY.test(person[email])) {
               this.counterOn[1] += 1;
             }
-            if (this.regexA.test(person.email)) {
+            if (this.regexA.test(person[email])) {
               this.counterOn[2] += 1;
             } else {
               this.counterOn[3] += 1;
@@ -51,13 +51,13 @@ export default {
       this.individual.forEach(person => {
         if (person.province == "QC") {
           for (let email in person) {
-            if (this.regexG.test(person.email)) {
+            if (this.regexG.test(person[email])) {
               this.counterQc[0] += 1;
             }
-            if (this.regexY.test(person.email)) {
+            if (this.regexY.test(person[email])) {
               this.counterQc[1] += 1;
             }
-            if (this.regexA.test(person.email)) {
+            if (this.regexA.test(person[email])) {
               this.counterQc[2] += 1;
             } else {
               this.counterQc[3] += 1;
@@ -71,13 +71,13 @@ export default {
       this.individual.forEach(person => {
         if (person.province == "NS") {
           for (let email in person) {
-            if (this.regexG.test(person.email)) {
+            if (this.regexG.test(person[email])) {
               this.counterNs[0] += 1;
             }
-            if (this.regexY.test(person.email)) {
+            if (this.regexY.test(person[email])) {
               this.counterNs[1] += 1;
             }
-            if (this.regexA.test(person.email)) {
+            if (this.regexA.test(person[email])) {
               this.counterNs[2] += 1;
             } else {
               this.counterNs[3] += 1;
@@ -91,13 +91,13 @@ export default {
       this.individual.forEach(person => {
         if (person.province == "NB") {
           for (let email in person) {
-            if (this.regexG.test(person.email)) {
+            if (this.regexG.test(person[email])) {
               this.counterNb[0] += 1;
             }
-            if (this.regexY.test(person.email)) {
+            if (this.regexY.test(person[email])) {
               this.counterNb[1] += 1;
             }
-            if (this.regexA.test(person.email)) {
+            if (this.regexA.test(person[email])) {
               this.counterNb[2] += 1;
             } else {
               this.counterNb[3] += 1;
@@ -111,13 +111,13 @@ export default {
       this.individual.forEach(person => {
         if (person.province == "MB") {
           for (let email in person) {
-            if (this.regexG.test(person.email)) {
+            if (this.regexG.test(person[email])) {
               this.counterMb[0] += 1;
             }
-            if (this.regexY.test(person.email)) {
+            if (this.regexY.test(person[email])) {
               this.counterMb[1] += 1;
             }
-            if (this.regexA.test(person.email)) {
+            if (this.regexA.test(person[email])) {
               this.counterMb[2] += 1;
             } else {
               this.counterMb[3] += 1;
@@ -131,13 +131,13 @@ export default {
       this.individual.forEach(person => {
         if (person.province == "BC") {
           for (let email in person) {
-            if (this.regexG.test(person.email)) {
+            if (this.regexG.test(person[email])) {
               this.counterBc[0] += 1;
             }
-            if (this.regexY.test(person.email)) {
+            if (this.regexY.test(person[email])) {
               this.counterBc[1] += 1;
             }
-            if (this.regexA.test(person.email)) {
+            if (this.regexA.test(person[email])) {
               this.counterBc[2] += 1;
             } else {
               this.counterBc[3] += 1;
@@ -151,13 +151,13 @@ export default {
       this.individual.forEach(person => {
         if (person.province == "PE") {
           for (let email in person) {
-            if (this.regexG.test(person.email)) {
+            if (this.regexG.test(person[email])) {
               this.counterPe[0] += 1;
             }
-            if (this.regexY.test(person.email)) {
+            if (this.regexY.test(person[email])) {
               this.counterPe[1] += 1;
             }
-            if (this.regexA.test(person.email)) {
+            if (this.regexA.test(person[email])) {
               this.counterPe[2] += 1;
             } else {
               this.counterPe[3] += 1;
@@ -171,13 +171,13 @@ export default {
       this.individual.forEach(person => {
         if (person.province == "SK") {
           for (let email in person) {
-            if (this.regexG.test(person.email)) {
+            if (this.regexG.test(person[email])) {
               this.counterSk[0] += 1;
             }
-            if (this.regexY.test(person.email)) {
+            if (this.regexY.test(person[email])) {
               this.counterSk[1] += 1;
             }
-            if (this.regexA.test(person.email)) {
+            if (this.regexA.test(person[email])) {
               this.counterSk[2] += 1;
             } else {
               this.counterSk[3] += 1;
@@ -191,13 +191,13 @@ export default {
       this.individual.forEach(person => {
         if (person.province == "AB") {
           for (let email in person) {
-            if (this.regexG.test(person.email)) {
+            if (this.regexG.test(person[email])) {
               this.counterAb[0] += 1;
             }
-            if (this.regexY.test(person.email)) {
+            if (this.regexY.test(person[email])) {
               this.counterAb[1] += 1;
             }
-            if (this.regexA.test(person.email)) {
+            if (this.regexA.test(person[email])) {
               this.counterAb[2] += 1;
             } else {
               this.counterAb[3] += 1;
@@ -211,13 +211,13 @@ export default {
       this.individual.forEach(person => {
         if (person.province == "NL") {
           for (let email in person) {
-            if (this.regexG.test(person.email)) {
+            if (this.regexG.test(person[email])) {
               this.counterNl[0] += 1;
             }
-            if (this.regexY.test(person.email)) {
+            if (this.regexY.test(person[email])) {
               this.counterNl[1] += 1;
             }
-            if (this.regexA.test(person.email)) {
+            if (this.regexA.test(person[email])) {
               this.counterNl[2] += 1;
             } else {
               this.counterNl[3] += 1;
@@ -231,13 +231,13 @@ export default {
       this.individual.forEach(person => {
         if (person.province == "NT") {
           for (let email in person) {
-            if (this.regexG.test(person.email)) {
+            if (this.regexG.test(person[email])) {
               this.counterNt[0] += 1;
             }
-            if (this.regexY.test(person.email)) {
+            if (this.regexY.test(person[email])) {
               this.counterNt[1] += 1;
             }
-            if (this.regexA.test(person.email)) {
+            if (this.regexA.test(person[email])) {
               this.counterNt[2] += 1;
             } else {
               this.counterNt[3] += 1;
@@ -251,13 +251,13 @@ export default {
       this.individual.forEach(person => {
         if (person.province == "YK") {
           for (let email in person) {
-            if (this.regexG.test(person.email)) {
+            if (this.regexG.test(person[email])) {
               this.counterYk[0] += 1;
             }
-            if (this.regexY.test(person.email)) {
+            if (this.regexY.test(person[email])) {
               this.counterYk[1] += 1;
             }
-            if (this.regexA.test(person.email)) {
+            if (this.regexA.test(person[email])) {
               this.counterYk[2] += 1;
             } else {
               this.counterYk[3] += 1;
@@ -271,13 +271,13 @@ export default {
       this.individual.forEach(person => {
         if (person.province == "NU") {
           for (let email in person) {
-            if (this.regexG.test(person.email)) {
+            if (this.regexG.test(person[email])) {
               this.counterNu[0] += 1;
             }
-            if (this.regexY.test(person.email)) {
+            if (this.regexY.test(person[email])) {
               this.counterNu[1] += 1;
             }
-            if (this.regexA.test(person.email)) {
+            if (this.regexA.test(person[email])) {
               this.counterNu[2] += 1;
             } else {
               this.counterNu[3] += 1;
